@@ -580,6 +580,11 @@ function getAssociatedProducts($module,$focus,$seid='')
 	$adjustment = number_format($adjustment, $no_of_decimal_places,'.','');
 	$product_Detail[1]['final_details']['adjustment'] = $adjustment;
 
+	//To set the STC value
+	$stc = ($focus->column_fields['stc'] != '')?$focus->column_fields['stc']:'0';
+	$stc = number_format($stc, $no_of_decimal_places,'.','');
+	$product_Detail[1]['final_details']['stc'] = $stc;
+
 	//To set the grand total
 	$grandTotal = ($focus->column_fields['hdnGrandTotal'] != '')?$focus->column_fields['hdnGrandTotal']:'0';
 	$grandTotal = number_format($grandTotal, $no_of_decimal_places,'.','');

@@ -274,6 +274,20 @@
 		    </span>
 		</td>
 	    </tr>
+	    {if $MODULE eq 'Quote'}
+	    <tr>
+	    <td width="83%">
+		    <span class="pull-right">
+			<b>{vtranslate('LBL_STC',$MODULE_NAME)}</b>
+		    </span>
+		</td>
+		<td>
+		    <span class="pull-right">
+			{$FINAL_DETAILS["stc"]}
+		    </span>
+		</td>
+	    </tr>
+	    {/if}
 	    <tr>
 		<td width="83%">
 		    <span class="pull-right">

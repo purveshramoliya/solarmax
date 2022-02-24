@@ -12,6 +12,7 @@ $languageStrings = array(
 	'Accepted'=>'Accepted',
 	'Inventory Manager'=>'Inventory Manager',
 	'LBL_ADD_RECORD' => 'Add Quote',
+	'LBL_STC' => 'STC Incentive',
 	'LBL_EXPORT_TO_PDF' => 'Export to PDF',
 	'LBL_IS_DELETED_FROM_THE_SYSTEM_PLEASE_REMOVE_OR_REPLACE_THIS_ITEM' => 'is deleted from the system.please remove or replace this item',
 	'LBL_QUOTE_INFORMATION' => 'Quote Details',

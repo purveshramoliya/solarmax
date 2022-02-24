@@ -1,4 +1,3 @@
-
 {*<!--
 /*********************************************************************************
 ** The contents of this file are subject to the vtiger CRM Public License Version 1.0
@@ -343,6 +342,16 @@
                 <span class="pull-right"><input id="adjustment" name="adjustment" type="text" data-validation-engine="validate[funcCall[Vtiger_PositiveNumber_Validator_Js.invokeValidation]]" class="lineItemInputBox" value="{if $FINAL.adjustment lt 0}{abs($FINAL.adjustment)}{elseif $FINAL.adjustment}{$FINAL.adjustment}{else}0{/if}"></span>
             </td>
         </tr>
+       {if $MODULE eq 'Quote'}
+         <tr valign="top">
+            <td width="83%" >
+                <div class="pull-right"><b>{vtranslate('LBL_STC',$MODULE)}&nbsp;&nbsp;</b> </div>
+            </td>
+            <td>
+                <span class="pull-right"><input id="stc" name="stc" type="text" data-validation-engine="validate[funcCall[Vtiger_PositiveNumber_Validator_Js.invokeValidation]]" class="lineItemInputBox" value="{if $FINAL.stc lt 0}{abs($FINAL.stc)}{elseif $FINAL.stc}{$FINAL.stc}{else}0{/if}"></span>
+            </td>
+        </tr>
+        {/if}
         <tr valign="top">
             <td  width="83%">
                 <span class="pull-right"><b>{vtranslate('LBL_GRAND_TOTAL',$MODULE)}</b></span>
