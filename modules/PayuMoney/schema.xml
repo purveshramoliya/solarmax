@@ -1,0 +1,152 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_payumoney</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_payumoney` (
+  `payumoneyid` int(11) NOT NULL DEFAULT '0',
+  `enable_recurring` varchar(5) DEFAULT NULL,
+  `terms_conditions` text,
+  `payment_no` varchar(32) DEFAULT NULL,
+  `subject` varchar(128) DEFAULT NULL,
+  `potential_id` int(11) DEFAULT NULL,
+  `customerno` varchar(128) DEFAULT NULL,
+  `quote_id` int(19) DEFAULT NULL,
+  `vtiger_purchaseorder` varchar(128) DEFAULT NULL,
+  `contact_id` int(11) DEFAULT NULL,
+  `duedate` date DEFAULT NULL,
+  `carrier` varchar(128) DEFAULT NULL,
+  `pending` varchar(128) DEFAULT NULL,
+  `hdnS_H_Percent` varchar(128) DEFAULT NULL,
+  `sostatus` varchar(128) DEFAULT NULL,
+  `txtAdjustment` decimal(25,8) DEFAULT NULL,
+  `salescommission` varchar(128) DEFAULT NULL,
+  `exciseduty` varchar(128) DEFAULT NULL,
+  `hdnGrandTotal` decimal(25,8) DEFAULT NULL,
+  `hdnSubTotal` decimal(25,8) DEFAULT NULL,
+  `hdnTaxType` varchar(128) DEFAULT NULL,
+  `hdnDiscountPercent` varchar(128) DEFAULT NULL,
+  `hdnDiscountAmount` decimal(25,8) DEFAULT NULL,
+  `hdnS_H_Amount` decimal(25,8) DEFAULT NULL,
+  `account_id` int(11) DEFAULT NULL,
+  `currency_id` varchar(128) DEFAULT NULL,
+  `conversion_rate` varchar(128) DEFAULT NULL,
+  `pre_tax_total` decimal(25,8) DEFAULT NULL,
+  `potentialid` int(11) DEFAULT NULL,
+  `quoteid` int(19) DEFAULT NULL,
+  `purchaseorder` varchar(128) DEFAULT NULL,
+  `contactid` int(11) DEFAULT NULL,
+  `adjustment` decimal(25,8) DEFAULT NULL,
+  `total` decimal(25,8) DEFAULT NULL,
+  `subtotal` decimal(25,8) DEFAULT NULL,
+  `taxtype` varchar(128) DEFAULT NULL,
+  `discount_percent` varchar(128) DEFAULT NULL,
+  `discount_amount` decimal(25,8) DEFAULT NULL,
+  `s_h_amount` decimal(25,8) DEFAULT NULL,
+  `accountid` int(11) DEFAULT NULL,
+  `s_h_percent` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`payumoneyid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_payumoneycf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_payumoneycf` (
+  `payumoneyid` int(11) NOT NULL,
+  PRIMARY KEY (`payumoneyid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_paobillads</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_paobillads` (
+  `paobilladdressid` int(11) NOT NULL DEFAULT '0',
+  `bill_street` varchar(255) DEFAULT NULL,
+  `bill_city` varchar(128) DEFAULT NULL,
+  `bill_state` varchar(128) DEFAULT NULL,
+  `bill_country` varchar(128) DEFAULT NULL,
+  `bill_pobox` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`paobilladdressid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_inventoryproductrel</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_inventoryproductrel` (
+  `id` int(19) DEFAULT NULL,
+  `productid` int(19) DEFAULT NULL,
+  `sequence_no` int(4) DEFAULT NULL,
+  `paymenttype` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `paymentno` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bankdetails` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `paymentdate` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `quantity` decimal(25,3) DEFAULT NULL,
+  `listprice` decimal(27,8) DEFAULT NULL,
+  `discount_percent` decimal(7,3) DEFAULT NULL,
+  `discount_amount` decimal(27,8) DEFAULT NULL,
+  `comment` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8_unicode_ci,
+  `incrementondel` int(11) NOT NULL DEFAULT '0',
+  `lineitem_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tax1` decimal(7,3) DEFAULT NULL,
+  `tax2` decimal(7,3) DEFAULT NULL,
+  `tax3` decimal(7,3) DEFAULT NULL,
+  `paymentmode` decimal(25,3) DEFAULT NULL,
+  PRIMARY KEY (`lineitem_id`),
+  KEY `inventoryproductrel_id_idx` (`id`),
+  KEY `inventoryproductrel_productid_idx` (`productid`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci]]></sql>
+		</table>
+		<table>
+			<name>vtiger_poashipads</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_poashipads` (
+  `payumoneyid` int(11) NOT NULL DEFAULT '0',
+  `ship_street` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`payumoneyid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_invoice_recurring_info</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_invoice_recurring_info` (
+  `salesorderid` int(11) NOT NULL DEFAULT '0',
+  `recurring_frequency` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `start_period` date DEFAULT NULL,
+  `end_period` date DEFAULT NULL,
+  `last_recurring_date` date DEFAULT NULL,
+  `payment_duration` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `invoice_status` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`salesorderid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci]]></sql>
+		</table>
+		<table>
+			<name>vtiger_paoshipads</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_paoshipads` (
+  `paoshipaddressid` int(11) NOT NULL DEFAULT '0',
+  `ship_city` varchar(128) DEFAULT NULL,
+  `ship_state` varchar(128) DEFAULT NULL,
+  `ship_code` varchar(128) DEFAULT NULL,
+  `ship_country` varchar(128) DEFAULT NULL,
+  `ship_pobox` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`paoshipaddressid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_sobillads</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_sobillads` (
+  `sobilladdressid` int(19) NOT NULL DEFAULT '0',
+  `bill_city` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bill_code` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bill_country` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bill_state` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bill_street` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bill_pobox` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`sobilladdressid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci]]></sql>
+		</table>
+		<table>
+			<name>vtiger_salesordercf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_salesordercf` (
+  `salesorderid` int(19) NOT NULL DEFAULT '0',
+  `cf_779` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`salesorderid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci]]></sql>
+		</table>
+	</tables>
+</schema>

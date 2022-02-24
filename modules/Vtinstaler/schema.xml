@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_vtinstaler</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_vtinstaler` (
+  `vtinstalerid` int(11) NOT NULL DEFAULT '0',
+  `installername` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`vtinstalerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_vtinstalercf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_vtinstalercf` (
+  `vtinstalerid` int(11) NOT NULL,
+  `cf_926` varchar(250) DEFAULT '',
+  `cf_928` varchar(50) DEFAULT '',
+  `cf_930` varchar(250) DEFAULT '',
+  `cf_932` date DEFAULT NULL,
+  `cf_934` varchar(250) DEFAULT '',
+  `cf_936` date DEFAULT NULL,
+  `cf_938` varchar(250) DEFAULT '',
+  `cf_940` date DEFAULT NULL,
+  PRIMARY KEY (`vtinstalerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

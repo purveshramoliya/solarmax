@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_custpurchase</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_custpurchase` (
+    `custpurchaseid` int(11) NOT NULL DEFAULT '0',
+      `purchaseordername` VARCHAR(128) DEFAULT NULL,
+    `custpostatus` VARCHAR(128) DEFAULT NULL,
+      PRIMARY KEY (`custpurchaseid`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_custpurchasecf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_custpurchasecf` (
+  `custpurchaseid` int(11) NOT NULL,
+  PRIMARY KEY (`custpurchaseid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>

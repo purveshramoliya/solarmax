@@ -1,0 +1,17 @@
+
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../../../../modules/PDFMaker/resources/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.fapreview {
+    /*display: inline-block;*/
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:black;
+}

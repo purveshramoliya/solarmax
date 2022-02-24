@@ -1,0 +1,40 @@
+.vte_currency_converter-icon {
+    width: 22px;
+}
+
+.dropdown.currency_converter-dropdown a {
+    box-shadow: none !important;
+}
+
+.vte_currency_converter-container {
+    padding: 0 5px;
+}
+
+form#google-converter-form {
+    text-align: center;
+}
+
+form#google-converter-form input {
+    text-align: right;
+}
+
+form#google-converter-form input[type="submit"] {
+    float: none;
+}
+
+.currency_converter_result_text {
+    padding: 6px 8px;
+    font-weight: bold;
+    font-size: 1.08em;
+}
+.sfe-break-top input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sfe-break-top select{
+    height: 30px;
+}
+#google-converter-form select {
+    height: 30px;
+}
+
